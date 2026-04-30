@@ -1,0 +1,56 @@
+{
+    "manifest_version": 3,
+    "name": "Netlix Bypass",
+    "version": "1.0",
+    "description": "Blocks Netflix household verification. with api block",
+    "minimum_chrome_version": "113",
+    "permissions": [
+        "tabs",
+        "webNavigation",
+        "scripting",
+        "storage",
+        "declarativeNetRequest"
+    ],
+    "host_permissions": [
+        "*://*.netflix.com/*",
+        "*://web.prod.cloud.netflix.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.netflix.com/*"
+            ],
+            "js": [
+                "inject_early.js"
+            ],
+            "run_at": "document_start",
+            "world": "MAIN",
+            "all_frames": false
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "ruleset_1",
+                "enabled": true,
+                "path": "rules.json"
+            }
+        ]
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    },
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    }
+}
