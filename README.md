@@ -1,4 +1,4 @@
-# FlixBypass
+# NETFLIX BYPASS WITH API / NETWORK BLOCKED
 
 A browser extension that bypasses Netflix household verification for uninterrupted streaming.
 
