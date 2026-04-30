@@ -1,0 +1,12 @@
+.DS_Store
+build/
+xcuserdata/
+*.xcuserdata
+DerivedData/
+*.xcscmblueprint
+*.xccheckout
+*.pdf
+*.zip
+chrome/_metadata/
+temp/
+.vscode/
